@@ -50,9 +50,25 @@ registerRoute(
   }),
 );
 
+self.addEventListener('install', (event) => {
+  event.waitUtil(
+    caches.open(capivara-cache)
+    .then(cache => (cache.addAll(urls)))
+  )
+
+})
+
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      return cachedResponse || fetch(event.request);
+    })
+  );
+});
 
 offlineFallback({
-  pageFallback: '/offline.html',
+  pageFallback: '/offline.html',  
 })
 
 
