@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="exemplo de fallback">
+    <title>Minha primeira PWA</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="images/pwa-icon-256.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="theme-color" content="white" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0"/>
+    <!--viewport para designers responsivos (mobo), content é a configuração-->
+    <link rel="icon" href="favicon.ico">
+
+    <script type="module" src="js/db.js"></script>
+</head>
+
+<body class="fullscreen">
+    <div class="container">
+        <h1 class="title">Minhas Notas</h1>
+        <div style="text-align: center;">
+            <img src="/images/capibaraNotes.png" alt="pwa" width="130" height="130">
+        </div>
+        <div id="entrada">
+           <div class="ladolado">
+                <input type="text" id="barraPesquisa" placeholder="Digite o título...">
+                <button id="btnPesquisar" class="pesquisa">Buscar</button>
+           </div>
+            <div class="ladolado">
+                <label for="Titulo">Titulo</label>
+                <input type="text" id="titulo" placeholder="Titulo" >
+            </div>
+           <div class="ladolado">
+                <label for="Categoria">Categoria</label>
+                <input type="categoria" id="categoria" placeholder="Categoria">
+           </div>
+            <div class="ladolado">
+                <label for="Descricao">Descrição</label>
+                <textarea id="descricao" cols="30" rows="10" placeholder="Descrição"></textarea>
+            </div>
+            <div class="ladolado">
+                <label for="data">Data</label>
+                <input type="date" id="data" value="Data">
+            </div>
+            <button id="btnCadastro">Cadastrar</button>
+            <button id="btnCarregar">Carregar Notas</button>
+            <button id="btnApagar">Apagar Registros</button>
+
+        </div>
+        <div id="resultados"></div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

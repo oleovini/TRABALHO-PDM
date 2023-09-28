@@ -1,0 +1,29 @@
+{
+    "name": "capivaranotes",
+    "short_name": "PWA para armazenar anotações",
+    "icons": [
+        {
+            "src": "images/.png",
+            "sizes": "130x130",
+            "type": "image/png"
+        },
+        {
+            "src": "images/capibaraNotes.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "images/capibaraNotes.png",
+            "sizes": "130x130",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "lang": "pt-BR",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "white"
+}
+
+
